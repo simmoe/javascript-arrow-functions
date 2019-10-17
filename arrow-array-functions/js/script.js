@@ -78,3 +78,21 @@ const alleFilm = filmer.filter( filmen => filmen.tittel === "Ben Hur" )
 
 console.log( "Filter returns an array: ", alleFilm )
  
+
+// Spread operator 
+
+let tredieTall = [2, 4, 6]
+
+const nytArray = [0, ...tredieTall, 8]
+
+console.log(nytArray)
+
+// or to concatenate full arrays...
+
+const arr1 = ["A", "B", "C"]
+const arr2 = ["D", "E", "F"]
+
+console.log( [...arr1, ...arr2])
+
+
+
