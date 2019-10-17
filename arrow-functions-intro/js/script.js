@@ -40,17 +40,71 @@ console.log( subtractOneThenAdd(12, 12) )
 /* 
 TASKS
 
+Write the following as an arrow function
+
+function antallTegn(tekst) {
+    return tekst.length;
+}
+
+console.log( antallTegn("Ha det på badet") );
+
+- - - 
+
+skriv følgende om til en arrow funksjon
+
+function heleNavnet(fornavn, etternavn) {
+    return `${fornavn} ${etternavn}`;
+}
+
+const navn = heleNavnet("Rick", "Astley");
+console.log(navn);
+
+- - - 
+
+Skriv en funksjon som heter info.
+Den skal ta to parametere - (skurk, fiende)
+FUnksjonen skal for eksempel returnere teksten 
+Pingvinen er fienden til Batman
+
+tekst("Pingvinen", "Batman")
+
+const tekst = (...)
+
+- - - 
+
 write an arrow function called returnHalf that takes a number as a parameter and returns this number divided by 2 
+
+- - - 
 
 write and arrow funtion, returnHalfAddSix that takes one number as parameter and returns that number divided by two plus 6 
 
-write an arraow function, returnHalfPlusX that takes two numbers, divides the first by two and adds the second to the result
+- - - 
+
+write an arrow function, returnHalfPlusX that takes two numbers, divides the first by two and adds the second to the result
+
+- - - 
 
 write an arrow function, msName that takes a single word as parameter and returns that word prefixed by "ms." - i.e ms. Alexandra
 
+- - - 
+
 write an arrow function, greet that takes two parameters: sex(m or f) and name (string). If sex is equal to m, return "Hello mr. " + name, else return "Hello ms. " + name
 
+
 */
+
+console.log("tasks")
+
+const antallTegn = str => str.length
+
+console.log( antallTegn("hello ms. robinson") )
+
+const heleNavnet = (fornavn, etternavn) => `${fornavn} ${etternavn}`
+
+console.log( heleNavnet("Rick", "Astley") )
+
+const tekst = (skurk, helt) => `${skurk} er fienden til ${helt}`
+console.log( tekst("Pigvinen", "Batman") )
 
 const returnHalf = nr => nr / 2
 
