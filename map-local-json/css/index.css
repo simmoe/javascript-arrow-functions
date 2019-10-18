@@ -8,19 +8,16 @@ html, body, h1, h2, h3, h4, h5, h6, p, a, img, main, section, article, div, span
     scroll-snap-type: y mandatory;
 }
 
+main{
+    display:grid;
+    padding:2rem;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    gap:.1rem;
+}
 section{
-    width:100vw;
-    height:100vh;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
+    background-color:#eee;
+    color:gray;
+    font-weight:300;
+    padding:1rem;
 }
 
-.orange{
-    background-color:orange;
-}
-.lightgreen{
-    background-color:lightgreen;
-}
-.lightsalmon{
-    background-color:lightsalmon;
-}

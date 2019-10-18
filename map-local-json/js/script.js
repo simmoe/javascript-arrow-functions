@@ -1,36 +1,39 @@
-// First lets get some corpus JSON
-// pick one: https://github.com/dariusk/corpora
-// well no, rather pick this one first:
-//https://github.com/dariusk/corpora/blob/master/data/animals/birds_antarctica.json
+// save these data as a file called birds.json: https://raw.githubusercontent.com/dariusk/corpora/master/data/animals/birds_antarctica.json
 
-async function birds(){
+
+// We can either fetch using await:
+async function birdsAwait() {
     const b = await fetch("./files/birds.json")
     const json = await b.json()
     showBirds(json)
-} 
+}
 
-birds()
+// Or promise:
+fetch("./files/birds.json")
+    .then( result => result.json())
+    .then( data => showBirds (data) )
 
-// now that weve set up the framework, lets do some printing to the HTML DOM
-
-const main = document.querySelector("main")
-
-function showBirds(json){
-    console.log(json)
-
-    node = document.createElement("section")
-    heading = document.createElement("h1")
-    text = document.createElement("p")
-
-    node.appendChild()
-
+// now that we got data, build some html 
+function showBirds(json) {
+    //console.log(json)
+    let html = ""
     json.birds.map(
-        fam => main.appendChild(
-            `
-            <section class="family">
-                <h2>${fam.family}</h2>
-            </section>
-            `
-        )
-    )    
+        fam => {
+            html += `<section class="family">`
+            html += `<h2>${fam.family}</h2>`
+            html += `<ul>`
+
+            fam.members.map(
+                (member, i) => {
+                    html += `<li>${member}</li>`
+                }
+            )
+
+            html += `</ul>`
+            html += `</section>`
+        }
+    )
+
+    const main = document.querySelector("main")
+    main.innerHTML = html
 }
