@@ -37,3 +37,4 @@ function showBirds(json) {
     const main = document.querySelector("main")
     main.innerHTML = html
 }
+
