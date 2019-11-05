@@ -1,22 +1,29 @@
-// Find some other data: https://github.com/dariusk/corpora/tree/master/data
-let json = {}
+// save these data as a file called birds.json: https://raw.githubusercontent.com/dariusk/corpora/master/data/animals/birds_antarctica.json
 
-// fetch using await:
-async function getData() {
-    const b = await fetch("./files/shakespeare.json")
-    json = await b.json()
-    showResult(json.phrases)
-}
+import Birds from '../files/Birds.js.js'
 
-getData()
+console.log(Birds.description)
+console.log(Birds.birds[3])
+
+showBirds(Birds.birds)
 
 // now that we got data, build some html 
-function showResult(arr) {
+function showBirds(array) {
+    //console.log(json)
     let html = ""
-    arr.map(
-        phrase => {
+    array.map(
+        fam => {
             html += `<section class="family">`
-            html += `<h2>${phrase}</h2>`
+            html += `<h2>${fam.family}</h2><hr/>`
+            html += `<ul>`
+
+            fam.members.map(
+                (member, i) => {
+                    html += `<li>${member}</li>`
+                }
+            )
+
+            html += `</ul>`
             html += `</section>`
         }
     )
@@ -25,9 +32,3 @@ function showResult(arr) {
     main.innerHTML = html
 }
 
-
-document.querySelector("#search").addEventListener("input", (e) => {    
-    //console.log(e.target.value)
-    const s = json.phrases.filter( phrase => phrase.includes( e.target.value ) )
-    showResult(s)
-})
