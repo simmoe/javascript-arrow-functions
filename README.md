@@ -1,5 +1,12 @@
 # javascript-arrow-functions
- introduction to modern javascript arrow functions
+Introduction to modern javascript arrow functions. In this repo you will find an approach to teaching arrow functions at high school A level. The tasks and demos have emphasis on visual output -ie affecting the HTML DOM, so the students can learn what functional arrays are good for. The last exercises uses more complex JSON arrays, to produce small functional webpages.  
+
+The subjects covered are:
+-arrow function syntax
+-array.map()
+-array.filter()
+-array.find()
+-array spread 
  
 Arrow functions are a new approach to writing quick and eloquent Javascript. It is also necessary knowledge if you plan on handling javascript in frameworks such as Angular, React or Vue. 
 
