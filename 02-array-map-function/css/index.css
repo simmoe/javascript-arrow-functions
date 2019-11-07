@@ -5,22 +5,27 @@ html, body, h1, h2, h3, h4, h5, h6, p, a, img, main, section, article, div, span
     padding:0;
     font-family: 'Open Sans', Arial;
     box-sizing:border-box;
+}
+
+html{
     scroll-snap-type: y mandatory;
 }
 
 section{
     width:100vw;
     height:100vh;
-    scroll-snap-align: start;
+    display:grid;
+    place-items:center;
+    scroll-snap-align: center;
     scroll-snap-stop: always;
 }
 
 .orange{
     background-color:orange;
 }
-.lightgreen{
-    background-color:lightgreen;
+.blue{
+    background-color:#4285F4;;
 }
-.lightsalmon{
-    background-color:lightsalmon;
+.forrestgreen{
+    background-color:forestgreen;
 }

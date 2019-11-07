@@ -1,6 +1,5 @@
 // Normally we write functions using the "function" declaration:
 
-
 function square(nr){
     return nr * nr
 }
@@ -8,19 +7,27 @@ function square(nr){
 console.log( square(4) )
 
 
-//In modern javascript we have a more fancy and quick way, the arrow function:
+//In modern javascript we have a more fancy way, the arrow function:
 
 const squareArrow = (nr) => {
     return nr * nr
 }
 
-console.log( squareArrow(2) )
+console.log( squareArrow(4) )
 
 //if we have only one parameter we can write that code even more compact:
 
-const squareMinified = nr => nr * nr
+const squareArrow2 = nr => {
+    return nr * nr
+}
 
-console.log( squareMinified(6) )
+console.log( squareArrow2(4) )
+
+//if we have just one statement inside the function we can also omit the curly braces:
+
+const squareArrow3 = nr => nr * nr
+
+console.log( squareArrow3(4) )
 
 //If we have more than one parameter we need to do the paranthesis
 
@@ -56,19 +63,16 @@ function heleNavnet(fornavn, etternavn) {
     return `${fornavn} ${etternavn}`;
 }
 
-const navn = heleNavnet("Rick", "Astley");
-console.log(navn);
+console.log( heleNavnet("Rick", "Astley") )
 
 - - - 
 
-Skriv en funksjon som heter info.
+Skriv en arrow funksjon som heter info.
 Den skal ta to parametere - (skurk, fiende)
-FUnksjonen skal for eksempel returnere teksten 
+Funksjonen skal for eksempel returnere teksten 
 Pingvinen er fienden til Batman
 
-tekst("Pingvinen", "Batman")
-
-const tekst = (...)
+console.log( info("Pingvinen", "Batman") )
 
 - - - 
 
@@ -93,7 +97,7 @@ write an arrow function, greet that takes two parameters: sex(m or f) and name (
 
 */
 
-console.log("tasks")
+console.log("tasks - answers")
 
 const antallTegn = str => str.length
 
@@ -103,8 +107,8 @@ const heleNavnet = (fornavn, etternavn) => `${fornavn} ${etternavn}`
 
 console.log( heleNavnet("Rick", "Astley") )
 
-const tekst = (skurk, helt) => `${skurk} er fienden til ${helt}`
-console.log( tekst("Pigvinen", "Batman") )
+const info = (skurk, helt) => `${skurk} er fienden til ${helt}`
+console.log( info("Pigvinen", "Batman") )
 
 const returnHalf = nr => nr / 2
 

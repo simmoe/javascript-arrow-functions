@@ -28,6 +28,6 @@ function showResult(array) {
 
 document.querySelector("#search").addEventListener("input", (e) => {    
     //console.log(e.target.value)
-    const s = json.phrases.filter( phrase => phrase.includes( e.target.value ) )
+    const s = Shakespeare.phrases.filter( phrase => phrase.includes( e.target.value ) )
     showResult(s)
 })

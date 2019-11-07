@@ -1,3 +1,17 @@
+//Say we have a function
+
+function color(str){
+    return str;
+}
+
+console.log( color('red') )
+
+//With arrow functions we can write this a little different:
+
+const colorA = str => str
+
+console.log( colorA('red') )
+
 // Say, we have an array:
 
 const tallene = [1, 2, 3, 4, 5, 6, 7, 8, 9, 8, 12, 32, 43, 12, 54, 6];
@@ -18,6 +32,21 @@ const storeTallArrow = tallene.filter( tal => tal > 10 )
 
 console.log(storeTallArrow)
 
+//again, lets make the code have some effect on the webpage
+
+const body = document.querySelector('body')
+
+storeTallArrow.map( 
+    tall => 
+    body.innerHTML += `
+        <svg height=200 width=200>
+            <circle cx='100' cy='100' r=${tall} fill='black' />
+        </svg>
+    `
+)
+
+//tallene.map...
+
 // we could easily apply other filters, say even numbers:
 
 const even = tallene.filter( tal => tal % 2 === 0 )
@@ -30,7 +59,7 @@ find numbers dividable by five in this array:
 
 const andretall = [35, 5, 24, 12, 25, 50];
 
-const fives = (...your code)
+const fives = ...your code
 
 console.log (fives)
 
@@ -58,7 +87,30 @@ const varer = [
 
   console.log( meieriprodukter )
 
-  // Array.find() is another way to search in an array:
+  //Now - we may want to write these numbers to the screen
+  
+  meieriprodukter.map(
+      produkt => 
+      body.innerHTML += `<li>${produkt.navn}</li>`
+  )
+
+// Oppgave: se om du kan skrive ut kategorien også
+
+//Or in another way...
+meieriprodukter.map(
+    produkt =>
+    body.innerHTML += 
+        `<div class='produkt'>
+            ${produkt.navn}
+        </div>`
+)
+
+//and then some CSS...
+
+// _ _ _ _ _ _ _ 
+
+// FIND
+// Array.find() is another way to search in an array:
 
 const filmer = [
     {tittel: "Love Story", arr: "1980" },
@@ -94,5 +146,19 @@ const arr2 = ["D", "E", "F"]
 
 console.log( [...arr1, ...arr2])
 
+
+//Task - see if you can concatenate ALL the arrays with numbers on the page - and write an arrow function that prints square boxes to the screen with each number as width/height
+
+
+
+
+
+const allNumbers = [...tallene, ...andretall, ...tredieTall]
+
+allNumbers.map(
+    n => 
+    body.innerHTML += 
+    `<div style='margin:2rem;border:1px solid black; height:${n}px; width:${n}px;'>${n}</div>`
+)
 
 
