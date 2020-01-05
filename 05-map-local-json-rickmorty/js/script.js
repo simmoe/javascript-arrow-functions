@@ -1,5 +1,5 @@
 // save characters data as a file called RickMorty.js: https://github.com/jdorfman/awesome-json-datasets#github-api 
-import RickMorty from '../files/RickMorty.js.js'
+import RickMorty from '../files/RickMorty.js'
 
 //Paste JSON here http://json.parser.online.fr/ to get a better picture
 console.log(RickMorty.results[0].name)

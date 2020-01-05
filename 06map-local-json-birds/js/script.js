@@ -1,6 +1,6 @@
 // save these data as a file called birds.json: https://raw.githubusercontent.com/dariusk/corpora/master/data/animals/birds_antarctica.json
 
-import Birds from '../files/Birds.js.js'
+import Birds from '../files/Birds.js'
 
 console.log(Birds.description)
 console.log(Birds.birds[3])
