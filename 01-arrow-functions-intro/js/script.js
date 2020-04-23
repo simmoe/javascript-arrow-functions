@@ -29,6 +29,7 @@ const squareArrow3 = nr => nr * nr
 
 console.log( squareArrow3(4) )
 
+
 //If we have more than one parameter we need to do the paranthesis
 
 const add = (a, b) => a + b
@@ -43,6 +44,18 @@ const subtractOneThenAdd = (a, b) => {
 }
 
 console.log( subtractOneThenAdd(12, 12) )
+
+//very often we see arrow functions inside other functions
+
+setTimeout(
+    ()=>document.querySelector('body').style.backgroundColor='orangered', 
+    3000
+)
+
+//and we also see them when using various asynchronous functions
+fetch('https://www.googleapis.com/books/v1/volumes?q=nygårdshaug')
+.then(res => res.json())
+.then(json=>console.log(json))
 
 /* 
 TASKS

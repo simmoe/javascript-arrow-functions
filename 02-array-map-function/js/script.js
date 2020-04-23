@@ -1,6 +1,5 @@
 // the map() function itertes over each item in an array and calls the function body for each value
 
-
 const tallene = [2, 7, 3, 34, 54]
 
 tallene.map( 
@@ -31,6 +30,13 @@ tallene.map( tall =>
 )
 
 //Head over to css...
+tallene.map( tall => 
+    body.innerHTML += `<section><h1 class='circle' style='font-size:${tall*6}px;width:${tall*10}px;height:${tall*10}px;'>${tall}</h1></section>`
+)
+
+
+//we might expand the numbers to a shape
+
 
 // say we had a more complex structure
 
@@ -42,7 +48,7 @@ const pages = [
 
 // we can now use map() with more effect:
 
-body.innerHTML = "";
+// body.innerHTML = "";
 
 pages.map( page => {
     body.innerHTML += `<section class=${page.color}><h1>${page.name}</h1></section>`
